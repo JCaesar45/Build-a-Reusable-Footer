@@ -1,0 +1,77 @@
+** start of index.html **
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reusable Footer Component</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.3/babel.min.js"></script>
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      src="index.jsx"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      data-presets="react"
+      data-type="module"
+    >
+      import { Footer } from './index.jsx';
+      ReactDOM.createRoot(document.getElementById('root')).render(<Footer />);
+    </script>
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+
+
+** end of styles.css **
+
+** start of index.jsx **
+
+export const Footer = () => {
+  return (
+    <footer>
+      {/* Unordered List Section */}
+      <div className="footer-lists">
+        <ul>
+          <li>About Us</li>
+          <li>Careers</li>
+        </ul>
+        <ul>
+          <li>Help Center</li>
+          <li>Contact</li>
+        </ul>
+        <ul>
+          <li>Terms of Service</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      {/* Links Section */}
+      <div className="footer-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+      </div>
+
+      {/* Copyright */}
+      <p>© 2025 Jordan Leturgez. All rights reserved.</p>
+    </footer>
+  );
+};
+
+
+** end of index.jsx **
+
